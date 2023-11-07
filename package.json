@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "Frontend do WebApp",
-  "homepage": "",
+  "homepage": "https://senac-escola.vercel.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/senac-escola/frontend.git"
