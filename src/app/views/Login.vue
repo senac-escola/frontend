@@ -2,7 +2,7 @@
   <i-layout vertical>
     <i-layout-content
       class="_display:flex _align-items:center _justify-content:center logo"
-      ><img src="/src/assets/logo-light-mode.webp" alt=""
+      ><img src="/logo-light-mode.webp" alt=""
     /></i-layout-content>
     <i-layout-content
       class="_display:flex _align-items:center _justify-content:center"

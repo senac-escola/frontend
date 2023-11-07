@@ -1,7 +1,7 @@
 <template>
   <i-layout class="nav-bar">
     <i-layout-header class="nav-header">
-      <img class="logo" src="src/assets/logo-light-mode.webp" alt="" />
+      <img class="logo" src="/logo-light-mode.webp" alt="" />
     </i-layout-header>
 
     <i-layout-content
@@ -27,7 +27,7 @@
             :class="{ 'e-active': $route.path == '/consultar-usuarios' }"
           >
             <span>Consultar usuários</span>
-            <img src="src/assets/users-icon.svg" alt="" />
+            <img src="/assets/icons/users-icon.svg" alt="" />
           </i-button>
           <i-button
             to="/cadastro-usuarios"
@@ -60,13 +60,13 @@
         class="_border-radius _display:flex _justify-content:space-between logout-button e-button e-danger"
       >
         <span>Sair</span>
-        <img src="src/assets/logout-icon.png" alt="" />
+        <img src="/assets/icons/logout-icon.png" alt="" />
       </i-button>
       <i-button
         to="/minha-conta"
         class="_border-radius:circle account-config e-button e-neutral"
       >
-        <img src="src/assets/account-config-icon.svg" alt="" />
+        <img src="/assets/icons/account-config-icon.svg" alt="" />
       </i-button>
     </i-layout-footer>
   </i-layout>
