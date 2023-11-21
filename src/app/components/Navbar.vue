@@ -13,11 +13,11 @@
         >
           <img
             class="userThumb _border-radius:circle"
-            src="https://s.dicionariofinanceiro.com/imagens/elon-musk-0.jpg"
+            src="/assets/users/maria.png"
             alt=""
           />
-          <span class="cargo">Gerente Escolar</span>
-          <h1 class="greeting">Olá Adrian,</h1>
+          <span class="cargo">Gerente</span>
+          <h1 class="greeting">Olá Maria,</h1>
         </i-layout-header>
 
         <i-layout-content class="nav-content">
@@ -30,11 +30,11 @@
             <img src="/assets/icons/users-icon.svg" alt="" />
           </i-button>
           <i-button
-            to="/cadastro-usuarios"
+            to="/cadastrar-usuario"
             class="action-button e-button e-fx"
-            :class="{ 'e-active': $route.path == '/cadastro-usuarios' }"
+            :class="{ 'e-active': $route.path == '/cadastrar-usuario' }"
           >
-            <span>Cadastros de usuários</span>
+            <span>Cadastrar usuário</span>
           </i-button>
           <i-button
             to="/alterar-usuarios"
@@ -56,7 +56,7 @@
 
     <i-layout-footer class="_display:flex _justify-content:start nav-footer">
       <i-button
-        to="/login"
+        to="/acessar"
         class="_border-radius _display:flex _justify-content:space-between logout-button e-button e-danger"
       >
         <span>Sair</span>
