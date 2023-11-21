@@ -3,38 +3,48 @@ import { RouteRecordRaw } from "vue-router";
 const routes: RouteRecordRaw[] = [
   {
     path: "/",
-    redirect: "/login",
+    redirect: "/acessar",
   },
   {
-    path: "/login",
-    name: "Login",
-    component: () => import("../views/Login.vue"),
+    path: "/acessar",
+    name: "Acessar conta",
+    component: () => import("../views/AcessarConta.vue"),
+  },
+  {
+    path: "/recuperar-senha",
+    name: "Recuperar minha senha",
+    component: () => import("../views/RecuperarSenha.vue"),
   },
   /* Adicione rotas */
   {
     path: "/consultar-usuarios",
-    name: "ConsultarUsuarios",
-    component: () => import("../views/manager/consultar_usuarios.vue"),
+    name: "Consultar usuários",
+    component: () => import("../views/manager/ConsultarUsuarios.vue"),
   },
   {
-    path: "/cadastro-usuarios",
-    name: "CadastroUsuarios",
-    component: () => import("../views/manager/cadastro_usuarios.vue"),
+    path: "/cadastrar-usuario",
+    name: "Cadastrar usuário",
+    component: () => import("../views/manager/CadastrarUsuario.vue"),
   },
   {
     path: "/alterar-usuarios",
-    name: "AlterarUsuarios",
-    component: () => import("../views/manager/alterar_usuarios.vue"),
+    name: "Alterar usuários",
+    component: () => import("../views/manager/AlterarUsuarios.vue"),
   },
   {
     path: "/excluir-usuarios",
-    name: "ExcluirUsuarios",
-    component: () => import("../views/manager/excluir_usuarios.vue"),
+    name: "Excluir usuários",
+    component: () => import("../views/manager/ExcluirUsuarios.vue"),
+  },
+  {
+    path: "/minha-conta",
+    name: "Minha conta",
+    component: () => import("../views/MinhaConta.vue"),
   },
   {
     path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    component: () => import("../views/NotFound.vue"),
+    name: "Não encontrado",
+    component: () => import("../views/NaoEncontrado.vue"),
   },
 ];
 

@@ -5,7 +5,7 @@
     >
       <img src="/logo-light-mode.webp" alt="" />
       <h1>Página não encontrada</h1>
-      <i-button :to="{ name: 'Login' }" class="e-button e-fx">
+      <i-button :to="{ name: 'AcessarConta' }" class="e-button e-fx">
         Voltar
       </i-button>
     </i-layout-content>

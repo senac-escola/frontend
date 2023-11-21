@@ -4,7 +4,7 @@
   >
     <i-container>
       <i-layout-header class="e-header">
-        <h2>Cadastro de Usuários</h2>
+        <h2>Cadastrar usuário</h2>
       </i-layout-header>
       <i-form>
         <i-container>
@@ -39,7 +39,7 @@
               />
             </i-column>
             <i-column sm="5" md="12">
-              <i-form><h2>Senha Provisória:</h2></i-form>
+              <i-form><h2>Senha provisória:</h2></i-form>
               <i-input
                 v-model="user.user_password"
                 placeholder="Digite aqui..."
@@ -53,7 +53,7 @@
     <div class="botoes">
       <i-button class="e-button e-danger">Cancelar</i-button>
       <i-button class="_margin-left:1 e-button" color="primary" @click="create"
-        >Concluir</i-button
+        >Cadastrar</i-button
       >
     </div>
   </i-layout-content>
@@ -66,14 +66,14 @@ import { UserType } from "../../model/user-type.enum";
 import { createUser } from "../../services/users-service";
 
 export default defineComponent({
-  name: "CadastroUsuarios",
+  name: "CadastrarUsuarios",
   setup() {
     const user = ref(<UserCreate>{});
     const userType = ref(<{ id: string; label: string }>{});
     const options = ref([
-      { id: "STUDENT", label: "Aluno" },
-      { id: "TEACHER", label: "Professor" },
-      { id: "SUPPLIER", label: "Fornecedor" },
+      { id: "STUDENT", label: "Estudante" },
+      { id: "TEACHER", label: "Professor(a)" },
+      { id: "SUPPLIER", label: "Fornecedor(a)" },
       { id: "MANAGER", label: "Gerente" },
     ]);
 

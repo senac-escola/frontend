@@ -22,12 +22,19 @@
           />
         </i-form-group>
         <i-form-group style="text-align: center">
-          <i-button color="primary" class="e-button access" type="submit">
+          <i-button
+            to="/consultar-usuarios"
+            color="primary"
+            class="e-button access"
+            type="submit"
+          >
             Acessar
           </i-button>
         </i-form-group>
         <i-form-group style="text-align: center">
-          <i-button link color="dark">Esqueci minha senha</i-button>
+          <i-button to="/recuperar-senha" link color="dark"
+            >Esqueci minha senha</i-button
+          >
         </i-form-group>
       </i-form></i-layout-content
     >
