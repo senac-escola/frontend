@@ -8,26 +8,20 @@
       class="_display:flex _align-items:center _justify-content:center"
       style="min-height: 100vh; background-color: var(--color--gray-10)"
       ><i-form style="min-width: 360px">
-        <i-form><h2>Acesse sua conta</h2></i-form>
+        <i-form><h2>Recupere sua senha</h2></i-form>
         <i-form-group>
           <i-form-label>Email:</i-form-label>
           <i-input name="email" placeholder="Digite o seu email aqui..." />
         </i-form-group>
-        <i-form-group>
-          <i-form-label>Senha:</i-form-label>
-          <i-input
-            name="password"
-            type="password"
-            placeholder="Digite a sua senha aqui..."
-          />
-        </i-form-group>
         <i-form-group style="text-align: center">
           <i-button color="primary" class="e-button access" type="submit">
-            Acessar
+            Enviar email de recuperação
           </i-button>
         </i-form-group>
         <i-form-group style="text-align: center">
-          <i-button link color="dark">Esqueci minha senha</i-button>
+          <i-button to="/acessar" link color="dark"
+            >Lembrou a senha? Acesse sua conta</i-button
+          >
         </i-form-group>
       </i-form></i-layout-content
     >

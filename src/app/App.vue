@@ -1,9 +1,16 @@
 <template>
   <i-layout vertical class="app _display:flex">
     <i-layout-aside
-      :style="{ display: currentRouteName == '/login' ? 'none' : 'flex' }"
+      :style="{
+        display:
+          currentRouteName == '/acessar'
+            ? 'none'
+            : currentRouteName == '/recuperar-senha'
+            ? 'none'
+            : 'flex',
+      }"
     >
-      <Navbar></Navbar>
+      <NavBar></NavBar>
     </i-layout-aside>
     <i-layout-content>
       <router-view></router-view>
@@ -12,11 +19,11 @@
 </template>
 
 <script lang="ts">
-import Navbar from "./components/Navbar.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default {
   components: {
-    Navbar,
+    NavBar,
   },
   computed: {
     currentRouteName() {

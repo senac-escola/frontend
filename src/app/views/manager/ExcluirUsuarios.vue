@@ -4,7 +4,7 @@
   >
     <i-container>
       <i-layout-header class="e-header">
-        <h2>Consultar Usuários</h2>
+        <h2>Excluir usuários</h2>
       </i-layout-header>
       <i-form>
         <i-container>
@@ -24,7 +24,7 @@
               <i-input v-model="filter.name" placeholder="Digite aqui..." />
             </i-column>
             <i-column sm="5" md="6">
-              <i-form><h2>CPF:</h2></i-form>
+              <i-form><h2>CPF/CNPJ:</h2></i-form>
               <i-input v-model="filter.document" placeholder="Digite aqui..." />
             </i-column>
             <i-column sm="5" offset-sm="2" md="6" offset-md="0">
@@ -47,7 +47,7 @@
                   <tr>
                     <th>Nome</th>
                     <th>Email</th>
-                    <th>CPF</th>
+                    <th>CPF/CNPJ</th>
                     <th>Tipo</th>
                   </tr>
                 </thead>
@@ -66,10 +66,6 @@
         </i-container>
       </i-form>
     </i-container>
-    <div class="botoes">
-      <i-button class="e-button e-danger">Cancelar</i-button>
-      <i-button class="_margin-left:1 e-button">Consultar</i-button>
-    </div>
   </i-layout-content>
 </template>
 
@@ -78,16 +74,16 @@ import { User } from "../../model/user.model";
 import { UserType } from "../../model/user-type.enum";
 import { defineComponent, ref, computed, onMounted } from "vue";
 import { listUsers } from "../../services/users-service";
-import { maskCpf } from "../../util/mask-cpf";
+import { documentMask } from "../../util/document-mask";
 
 export default defineComponent({
-  name: "ConsultarUsuarios",
+  name: "ExcluirUsuarios",
   setup() {
     const selected = ref();
     const options = ref([
-      { id: "STUDENT", label: "Aluno" },
-      { id: "TEACHER", label: "Professor" },
-      { id: "FORNECEDOR", label: "Fornecedor" },
+      { id: "STUDENT", label: "Estudante" },
+      { id: "TEACHER", label: "Professor(a)" },
+      { id: "SUPPLIER", label: "Fornecedor(a)" },
       { id: "MANAGER", label: "Gerente" },
     ]);
     const filter = ref({
@@ -122,7 +118,7 @@ export default defineComponent({
           return {
             user_name: user.user_name,
             user_type: (<any>UserType)[user.user_type.toUpperCase()],
-            document_id: maskCpf(user.document_id.toString()),
+            document_id: documentMask(user.document_id.toString()),
             user_address: user.user_address,
             user_phone: user.user_phone,
             user_email: user.user_email,
